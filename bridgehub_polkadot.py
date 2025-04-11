@@ -1,22 +1,9 @@
 from substrateinterface import SubstrateInterface
+import json
+from pathlib import Path
 
-COLLATORS = {
-    "16WWmr2Xqgy5fna35GsNHXMU7vDBM12gzHCFGibQjSmKpAN": "PARANODES.IO",
-    "15PUkSRWuefDSLbEYp39MJ1zxShrratU4SXaLZanL8Zkren3": "OPENBITLAB/BRIDGEHUB",
-    "16X3CtQVwBvHGJCquvLw1ayG5SWk4qKUHudBDpQVGXBdvqdg": "STALKER SPACE/BRIDGEHUB",
-    "13oz8fEwZ7TmpoAnozbHAfCG2L5uWdVmDq7cjY5Aw2CBW5Cj": "MEGATRON",
-    "15MV2nX6BEoiBz8Ua2xNta19sVBKT7kiw2MEHdu2Jd9a4VaC": "LUCKYFRIDAY.IO",
-    "15cu9qomrRvnqkvnSMhPPkBp9359QDbGBy1bVo3tseozxhxj": "HYPERSPEED",
-    "14gL78nk3rVZamwGg33VuEa1koYC3rcoymFcPGXKbJ7JKyHZ": "COINSTUDIO/BRIDGEHUB",
-    "14icei1ZMoG9QtKBFDk4y1eMR756q2TREuRAi2BanJ9MJVPL": "🧊 ICEBERG NODES 🧊",
-    "12owmS8Sobqxfx6KK9vk9e67FqnGpZdmxCFCRFptzZdsoujC": "POLKADOTTERS/⛓CORE",
-    "13Jpq4n3PXXaSAbJTMmFD78mXAzs8PzgUUQd5ve8saw7HQS5": "STAKEWORLD.IO",
-    "13TUNfEBCi6xw5ZQgxYAwbCsALSuDfqDWMfbHigZNgncuV6v": "🐟YELLOWFIN TUNA🐟/🥗",
-    "13xAUHVDyG1v9LLHYtMm7XZFyKNVxoj47oWV431XQ9kjXN38": "MILE🌍/SYS",
-    "15wepZh1jWNqxBjsgErm8HmYiE21n79c5krQJeTsYAjHddeM": "SIK | CRIFFERENT.DE",
-    "134AK3RiMA97Fx9dLj1CvuLJUa8Yo93EeLA1TkP6CCGnWMSd": "134AK3RiMA97Fx9dLj1CvuLJUa8Yo93EeLA1TkP6CCGnWMSd",
-    "15dU8Tt7kde2diuHzijGbKGPU5K8BPzrFJfYFozvrS1DdE21": "15dU8Tt7kde2diuHzijGbKGPU5K8BPzrFJfYFozvrS1DdE21",
-}
+with open(Path(__file__).parent / "collators.json", encoding='utf-8') as f:
+    COLLATORS = json.load(f)
 
 def check_collators(collator_name, invulnerables, candidates):
     target_address = None
