@@ -1,6 +1,5 @@
 from substrateinterface import SubstrateInterface
 
-# 1. Define your known collators (address -> name mapping)
 COLLATORS = {
     "16WWmr2Xqgy5fna35GsNHXMU7vDBM12gzHCFGibQjSmKpAN": "PARANODES.IO",
     "12ixt2xmCJKuLXjM3gh1SY7C3aj4gBoBUqExTBTGhLCSATFw": "12ixt2xmCJKuLXjM3gh1SY7C3aj4gBoBUqExTBTGhLCSATFw",
@@ -61,16 +60,14 @@ def detect_unknown_collators(all_collators):
             print(f"  {addr}")
         print("\nTip: Add these to KNOWN_COLLATORS dictionary")
 
-if __name__ == "__main__":
-    print("Starting checks for Paranodes.io in collators list ...")
-    print("Polkadot AssetHub")
-    invulnerables, candidates = get_collators()
+print("Starting checks for Paranodes.io in collators list ...")
+print("Polkadot AssetHub")
+invulnerables, candidates = get_collators()
     
-    print_collators("Invulnerable Collators", invulnerables)
-    print_collators("Other Collators", candidates)
+print_collators("Invulnerable Collators", invulnerables)
+print_collators("Other Collators", candidates)
     
-    # Specific collator check (add more as needed)
-    check_collators("PARANODES.IO", invulnerables, candidates)
+check_collators("PARANODES.IO", invulnerables, candidates)
     
-    detect_unknown_collators(invulnerables + candidates)
-    print("\n✅ CHECKS COMPLETE!")
+detect_unknown_collators(invulnerables + candidates)
+print("\n✅ CHECKS COMPLETE!")
