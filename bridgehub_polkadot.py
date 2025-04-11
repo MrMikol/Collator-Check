@@ -2,7 +2,7 @@ from substrateinterface import SubstrateInterface
 import json
 from pathlib import Path
 
-with open(Path(__file__).parent / "collators.json", encoding='utf-8') as f:
+with open(Path(__file__).parent / "polkadot_collators.json", encoding='utf-8') as f:
     COLLATORS = json.load(f)
 
 def check_collators(collator_name, invulnerables, candidates):
