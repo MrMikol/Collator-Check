@@ -57,26 +57,35 @@ def check_collator(name, invulnerables, candidates, collators):
     
     if not target_address:
         print(f"\n❌ {name} not found in collator registry")
+        print()
+        print()
         return
     
     if target_address in invulnerables:
         print(f"\n✅ {name} found in Invulnerables")
+        print()
+        print()
     elif target_address in candidates:
         print(f"\n✅ {name} found in Candidates")
+        print()
+        print()
     else:
         print(f"\n❌ {name} not currently active")
+        print()
+        print()
 
-print(f"🚀 Starting Collator Checks - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"🚀 Starting Collator Checks for Paranodes System Chains - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 config = load_config()
     
-    # Check all Polkadot chains
-print("\n" + "🌐 POLKADOT CHAINS".center(50, "="))
+print("\n" + "POLKADOT CHAINS".center(50, "="))
+print()
 for chain in config["polkadot_chains"]:
     check_chain(chain)
-    
-    # Check all Kusama chains
-print("\n" + "🔴 KUSAMA CHAINS".center(50, "="))
+print()    
+
+print("\n" + "KUSAMA CHAINS".center(50, "="))
+print()
 for chain in config["kusama_chains"]:
     check_chain(chain)
-    
+print()
 print("\n" + "✅ ALL CHECKS COMPLETE".center(50, "="))
