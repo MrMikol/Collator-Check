@@ -1,0 +1,56 @@
+{
+    "polkadot_chains": [
+        {
+            "name": "AssetHub-Polkadot",
+            "rpc_url": "wss://rpc-asset-hub-polkadot.luckyfriday.io",
+            "collator_file": "polkadot_collators.json"
+        },
+        {
+            "name": "BridgeHub-Polkadot",
+            "rpc_url": "wss://rpc-bridge-hub-polkadot.luckyfriday.io",
+            "collator_file": "polkadot_collators.json"
+        },
+        {
+            "name": "Collectives-Polkadot",
+            "rpc_url": "wss://rpc-collectives-polkadot.luckyfriday.io",
+            "collator_file": "polkadot_collators.json"
+        },
+        {
+            "name": "Coretime-Polkadot",
+            "rpc_url": "wss://rpc-coretime-polkadot.luckyfriday.io",
+            "collator_file": "polkadot_collators.json"
+        },
+        {
+            "name": "People-Polkadot",
+            "rpc_url": "wss://rpc-people-polkadot.luckyfriday.io",
+            "collator_file": "polkadot_collators.json"
+        }
+    ],
+    "kusama_chains": [
+        {
+            "name": "AssetHub-Kusama",
+            "rpc_url": "wss://rpc-asset-hub-kusama.luckyfriday.io",
+            "collator_file": "kusama_collators.json"
+        },
+        {
+            "name": "BridgeHub-Kusama",
+            "rpc_url": "wss://rpc-bridge-hub-kusama.luckyfriday.io",
+            "collator_file": "kusama_collators.json"
+        },
+        {
+            "name": "Coretime-Kusama",
+            "rpc_url": "wss://rpc-coretime-kusama.luckyfriday.io",
+            "collator_file": "kusama_collators.json"
+        },
+        {
+            "name": "Encointer-Kusama",
+            "rpc_url": "wss://rpc-encointer-kusama.luckyfriday.io",
+            "collator_file": "kusama_collators.json"
+        },
+        {
+            "name": "PeopleKusama",
+            "rpc_url": "wss://rpc-people-kusama.luckyfriday.io",
+            "collator_file": "kusama_collators.json"
+        }
+    ]
+}
