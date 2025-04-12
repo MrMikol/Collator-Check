@@ -46,7 +46,6 @@ def detect_unknown_collators(all_collators):
         print("\n⚠️ Unknown Collators Detected:")
         for addr in unknown:
             print(f"  {addr}")
-        print("\nTip: Add these to KNOWN_COLLATORS dictionary")
 
 print("Starting checks for Paranodes.io in collators list ...")
 print("Polkadot Collectives")
