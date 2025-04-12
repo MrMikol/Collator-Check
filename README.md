@@ -1,2 +1,2 @@
 # Collator-Check
-Checks if an organization is in the collator list on Polkadot.js
+Checks if a collator is in the collator list on Polkadot.js
