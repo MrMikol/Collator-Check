@@ -17,7 +17,6 @@ logging.basicConfig(
 )
 
 def log(message: str, console: bool = False, level: str = "info"):
-    """Unified logging function"""
     if level.lower() == "error":
         logging.error(message)
         if console:
@@ -32,7 +31,6 @@ def log(message: str, console: bool = False, level: str = "info"):
             print(f"ℹ️ {message}")
 
 def load_config() -> Dict:
-    """Load configuration from JSON file"""
     try:
         config_path = Path(__file__).parent / "system_chains_config.json"
         with open(config_path, encoding='utf-8') as f:
@@ -42,7 +40,6 @@ def load_config() -> Dict:
         raise
 
 def send_discord_alert(missing_report: Dict, webhook_url: str) -> None:
-    """Send formatted alert to Discord webhook"""
     try:
         embed = {
             "title": "Collator Status Alert",
@@ -79,7 +76,6 @@ def send_discord_alert(missing_report: Dict, webhook_url: str) -> None:
         log(f"Discord send failed: {str(e)}", console=True, level="error")
 
 def check_chain(chain_config: Dict, missing_trackers: Dict) -> bool:
-    """Check a single chain's collators"""
     try:
         with open(Path(__file__).parent / chain_config["collator_file"], encoding='utf-8') as f:
             collators = json.load(f)
@@ -114,7 +110,6 @@ def check_chain(chain_config: Dict, missing_trackers: Dict) -> bool:
         return False
 
 def check_collator(name: str, invulnerables: List, candidates: List, collators: Dict) -> bool:
-    """Check if a specific collator is active"""
     target_address = next(
         (addr for addr, collator_name in collators.items() 
          if name.lower() in collator_name.lower()),
@@ -136,7 +131,6 @@ def check_collator(name: str, invulnerables: List, candidates: List, collators: 
     return False
 
 def main(test_mode: bool = False) -> None:
-    """Main execution function"""
     try:
         log("🚀 Starting collator checks", console=True)
         config = load_config()
