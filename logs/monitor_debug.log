@@ -1,0 +1,5 @@
+2025-04-14 14:46:01,218 - INFO - Starting collator monitoring session
+2025-04-14 14:46:01,219 - INFO - Processing polkadot_chains
+2025-04-14 14:46:17,605 - INFO - Processing kusama_chains
+2025-04-14 14:46:34,152 - INFO - Completed chain checks
+2025-04-14 14:46:34,154 - INFO - Monitoring completed successfully
